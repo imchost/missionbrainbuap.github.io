@@ -1,0 +1,126 @@
+/* ===== Fuente global y colores base ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* ===== Encabezado y navegación ===== */
+header {
+  background-color: black;
+  padding: 10px 20px;
+  position: sticky; /* Hace que el menú se quede fijo arriba */
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #f39200;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: white;
+}
+
+/* ===== Sección de bienvenida ===== */
+.bienvenida {
+  padding: 40px 20px;
+}
+
+.bienvenida h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  font-size: 1.1em;
+}
+
+/* ===== Estilo general para las secciones: noticias, eventos, etc. ===== */
+section {
+  padding: 30px 20px;
+  border-top: 1px solid #333;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+section p {
+  max-width: 600px;
+  margin-left: 0;
+}
+
+/* Enlaces "Ver más" */
+section a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f39200;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* ===== Pie de página (Footer) ===== */
+footer {
+  background-color: black;
+  padding: 30px 20px;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-columns a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+/* ===== Responsive: móvil ===== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
