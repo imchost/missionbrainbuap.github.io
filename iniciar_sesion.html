@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acceso exclusivo | Mission:Brain BUAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #f39200;
+      --background: #f9f9f9;
+      --text: #2e2e2e;
+      --card-bg: #ffffff;
+      --border: #ddd;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .password-section {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px var(--shadow);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+    }
+
+    label, input, button {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    input[type="password"] {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .toggle-password {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #e67e00;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Zona exclusiva para miembros activos</h1>
+    <p class="lead">Accede a oportunidades únicas que solo Mission:Brain BUAP puede ofrecerte. Este espacio es tuyo.</p>
+
+    <div class="password-section" id="login-form">
+      <label for="password">Contraseña de acceso:</label>
+      <input type="password" id="password" placeholder="Ingresa la contraseña">
+      <label class="toggle-password">
+        <input type="checkbox" id="show-password"> Mostrar contraseña
+      </label>
+      <button onclick="checkPassword()">Ingresar</button>
+      <p class="error" id="error-msg">Contraseña incorrecta. Intenta nuevamente.</p>
+    </div>
+
+    <div id="private-content" class="hidden">
+      <div class="card">
+        <h3>Becas</h3>
+        <p>Explora convocatorias de apoyo económico para miembros comprometidos.</p>
+        <a href="#">Ver oportunidades</a>
+      </div>
+
+      <div class="card">
+        <h3>Convocatorias</h3>
+        <p>Inscríbete en congresos, eventos especiales y voluntariados activos.</p>
+        <a href="#">Ir a convocatorias</a>
+      </div>
+
+      <div class="card">
+        <h3>Enlaces de inscripción</h3>
+        <p>Accede directamente a formularios vigentes para cada actividad.</p>
+        <a href="#">Ir a formularios</a>
+      </div>
+
+      <div class="card">
+        <h3>Formatos oficiales</h3>
+        <p>Descarga documentos oficiales para trámites internos del capítulo.</p>
+        <a href="#">Descargar formatos</a>
+      </div>
+
+      <div class="card">
+        <h3>Solicitar constancias</h3>
+        <p>Solicita tu constancia por actividades, cursos o participación.</p>
+        <a href="#">Solicitar ahora</a>
+      </div>
+
+      <div class="card">
+        <h3>Links externos</h3>
+        <p>Accede a plataformas externas recomendadas, bibliotecas y más.</p>
+        <a href="#">Ver enlaces</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const passwordInput = document.getElementById('password');
+    const errorMsg = document.getElementById('error-msg');
+    const privateContent = document.getElementById('private-content');
+    const loginForm = document.getElementById('login-form');
+
+    const correctPassword = "mbrain2025"; // Personaliza aquí
+
+    function checkPassword() {
+      if (passwordInput.value === correctPassword) {
+        loginForm.classList.add('hidden');
+        privateContent.classList.remove('hidden');
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    }
+
+    document.getElementById('show-password').addEventListener('change', function () {
+      passwordInput.type = this.checked ? 'text' : 'password';
+    });
+  </script>
+</body>
+</html>

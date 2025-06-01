@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos Académicos | Mission:Brain BUAP</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo"><img src="logo.svg" alt="Logo" /></a>
+      <ul class="nav-menu">
+        <li><a href="participa.html">Participa</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+        <li><a href="recursos.html" class="active">Recursos</a></li>
+        <li><a href="conocenos.html">Conócenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1>Recursos académicos</h1>
+
+    <!-- Documentos útiles -->
+    <section>
+      <h2>Documentos útiles</h2>
+      <div class="featured-docs">
+        <div class="doc-card">
+          <h3>Manual para rotaciones</h3>
+          <p>Información clave para tu experiencia en rotaciones clínicas.</p>
+          <a href="docs/manual_rotaciones.pdf" target="_blank">Descargar PDF</a>
+        </div>
+        <div class="doc-card">
+          <h3>Guía de inscripción a eventos</h3>
+          <p>Paso a paso para no perderte ninguna oportunidad.</p>
+          <a href="docs/guia_eventos.pdf" target="_blank">Descargar PDF</a>
+        </div>
+      </div>
+      <ul class="doc-list">
+        <li><a href="docs/formatos_generales.pdf" target="_blank">Formatos generales</a></li>
+        <li><a href="docs/politicas_eventos.pdf" target="_blank">Políticas de participación</a></li>
+      </ul>
+    </section>
+
+    <!-- Clases grabadas -->
+    <section>
+      <h2>Clases grabadas</h2>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/videoID1" allowfullscreen></iframe>
+        <p>Tema: Introducción a neurocirugía pediátrica</p>
+        <div class="video-links">
+          <a href="https://youtube.com/watch?v=videoID1" target="_blank">
+            <img src="youtube_icon.jpg" alt="YouTube" /></a>
+          <a href="https://drive.google.com/file/d/archivoID/view" target="_blank">
+            <img src="drive_icon.jpg" alt="Drive" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Cómo me inscribo a un curso?</summary>
+        <p>Consulta la sección "Participa" y busca cursos disponibles con el botón "Aplicar".</p>
+      </details>
+      <details>
+        <summary>¿Dónde encuentro mis certificados?</summary>
+        <p>Los certificados se entregan vía correo electrónico tras finalizar el evento.</p>
+      </details>
+    </section>
+
+    <!-- Contacto -->
+    <section>
+      <h2>Contacto</h2>
+      <form action="submit_form.php" method="POST" class="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Sección privada -->
+    <section class="privado">
+      <h2>Área exclusiva para miembros activos</h2>
+      <p>Ingresa con tu cuenta para acceder a materiales internos.</p>
+      <a href="login.html">Iniciar sesión</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-columns">
+      <div><a href="participa.html">Participa</a></div>
+      <div><a href="eventos.html">Eventos</a></div>
+      <div><a href="comunidad.html">Comunidad</a></div>
+      <div><a href="recursos.html">Recursos</a></div>
+      <div><a href="conocenos.html">Conócenos</a></div>
+    </div>
+    <p class="footer-text">© 2025 Mission:Brain BUAP</p>
+  </footer>
+</body>
+</html>
